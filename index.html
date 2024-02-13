@@ -1,159 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Website</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-
-    #content-container {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      max-width: 600px;
-      width: 100%;
-    }
-
-    .tab-container {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 20px;
-    }
-
-    .tab {
-      padding: 10px 20px;
-      cursor: pointer;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-      background-color: #f0f0f0;
-      transition: background-color 0.5s ease-in-out;
-    }
-
-    .tab:hover {
-      background-color: #e0e0e0;
-    }
-
-    .tab-content {
-      display: none;
-    }
-
-    .tab-content.active {
-      display: block;
-    }
-
-    .highlight {
-      background-color: lightgray;
-      padding: 2px;
-      border-radius: 6px;
-    }
-
-    input {
-      padding: 10px;
-      margin-bottom: 10px;
-      width: 80%;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-    }
-
-    button {
-      background-color: #f0f0f0;
-      border: none;
-      padding: 10px 20px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #e0e0e0;
-    }
-  </style>
-</head>
-<body>
-
-<div id="content-container">
-  <div class="tab-container">
-    <div class="tab" onclick="showTab('tab1')">backarrow</div>
-    <div class="tab" onclick="showTab('tab2')">forwardarrow</div>
-  </div>
-
-  <div id="tab1" class="tab-content active">
-    <h2>Chrome Automatic Update Blocker</h2>
-    <p><span class="highlight">Credits to Bypassi#7037</span></p>
-
-    <p><strong>Only works on Chrome 85 or higher</strong></p>
-
-    <p><strong>Info:</strong></p>
-    <p>This method (originally found by Catakang#0987) will help you keep your
-      Chromebook downgraded (or on the current version) without automatic updates
-      screwing you over using onc files. You can convince your Chromebook that the
-      WiFi that you're connected to is pay-to-use (like a hotspot using data), and
-      thus it will not check for updates.</p>
-
-    <p><em><span class="highlight">I cannot guarantee that this will work on every WiFi.</span></em></p>
-
-    <p><strong>Instructions:</strong></p>
-    <ul>
-      <li>Go to <span class="highlight">chrome://network#state</span> (on your school Chromebook, of course; if this
-        is blocked then you're kinda screwed lol).</li>
-      <li>Scroll to the bottom of the page; you should see a list of <span class="highlight">favorite</span> WiFis that you've connected to in the
-        past.</li>
-      <li>Click the <span class="highlight">+</span> sign next to the WiFi name of each network that you
-        commonly connect your Chromebook to. The more WiFis you expand, the better, but note that they have to come
-        from the <span class="highlight">favorites</span> section.</li>
-      <li>Use <span class="highlight">Ctrl+A</span> and <span class="highlight">Ctrl+C</span> to copy all the text on the entire <span class="highlight">network#state</span>
-        page.</li>
-      <li>Go back to this page and paste the copied text into
-        the textbox on the next tab.</li>
-      <li>Press the <span class="highlight">Generate ONC</span> button below the textbox.</li>
-      <li>Once you have downloaded the file, go to <span class="highlight">chrome://network#general</span> and click
-        on the <span class="highlight">Import ONC</span> button. Import the newly downloaded file.</li>
-    </ul>
-
-    <p>Your Chromebook will no longer automatically update (as long as you are
-      on a WiFi that you used CAUB on). Be careful not to stay on a WiFi for too
-      long without using CAUB on it.</p>
-  </div>
-
-  <div id="tab2" class="tab-content">
-    <input placeholder="Enter your input"/>
-    <button onclick="gen()">
-      <b>Generate Output</b>
-    </button>
-
-    <script>
-      function gen() {
-        // Add your generation logic here
-        console.log('Generating...');
-      }
-    </script>
-  </div>
-</div>
-
-<script>
-  function showTab(tabId) {
-    const tabs = document.querySelectorAll('.tab-content');
-    tabs.forEach(tab => {
-      tab.classList.remove('active');
-    });
-
-    document.getElementById(tabId).classList.add('active');
-  }
-</script>
-
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome.css">
+    <title>CAUB</title>
+  </head>
+  <body>
+    <div id="content-container">
+      <div class="tab-container">
+        <div class="tab" onclick="showTab('tab1')">
+          <i class="fa-solid fa-arrow-left"></i>
+        </div>
+        <div class="tab" onclick="showTab('tab2')">
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+      <div id="tab1" class="tab-content active">
+        <h2>Chrome Automatic Update Blocker</h2>
+        <p>
+          <span class="highlight">Credits to Bypassi#7037</span>
+        </p>
+        <p>
+          <strong>Only works on Chrome 85 or higher</strong>
+        </p>
+        <p>
+          <strong>Info:</strong>
+        </p>
+        <p>This method (originally found by Catakang#0987) will help you keep your Chromebook downgraded (or on the current version) without automatic updates screwing you over using onc files. You can convince your Chromebook that the WiFi that you're connected to is pay-to-use (like a hotspot using data), and thus it will not check for updates.</p>
+        <p>
+          <em>
+            <span class="highlight">I cannot guarantee that this will work on every WiFi.</span>
+          </em>
+        </p>
+        <p>
+          <strong>Instructions:</strong>
+        </p>
+        <ul>
+          <li>Go to <span class="highlight">chrome://network#state</span> (on your school Chromebook, of course; if this is blocked then you're kinda screwed lol). </li>
+          <li>Scroll to the bottom of the page; you should see a list of <span class="highlight">favorite</span> WiFis that you've connected to in the past. </li>
+          <li>Click the <span class="highlight">+</span> sign next to the WiFi name of each network that you commonly connect your Chromebook to. The more WiFis you expand, the better, but note that they have to come from the <span class="highlight">favorites</span> section. </li>
+          <li>Use <span class="highlight">Ctrl+A</span> and <span class="highlight">Ctrl+C</span> to copy all the text on the entire <span class="highlight">network#state</span> page. </li>
+          <li>Go back to this page and paste the copied text into the textbox on the next tab.</li>
+          <li>Press the <span class="highlight">Generate ONC</span> button below the textbox. </li>
+          <li>Once you have downloaded the file, go to <span class="highlight">chrome://network#general</span> and click on the <span class="highlight">Import ONC</span> button. Import the newly downloaded file. </li>
+        </ul>
+        <p>Your Chromebook will no longer automatically update (as long as you are on a WiFi that you used CAUB on). Be careful not to stay on a WiFi for too long without using CAUB on it.</p>
+      </div>
+      <div id="tab2" class="tab-content">
+        <div style="display: flex; gap: 10px;">
+          <input placeholder="Read Instructions" />
+          <button onclick="gen()">
+            <b>Download ONC <i class="fa-solid fa-file-arrow-down"></i>
+            </b>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src"logic.js"></script>
+  </body>
 </html>
