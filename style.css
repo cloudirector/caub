@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: "Comfortaa";
-    background-color: #f4f4f4;
+    background-color: #E9DAB3;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,14 +27,14 @@ body {
   .tab {
     padding: 10px 20px;
     cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(233, 218, 179, 0.1);
     border-radius: 5px;
-    background-color: #f0f0f0;
+    background-color: #E9DAB3;
     transition: background-color 0.5s ease-in-out;
   }
 
   .tab:hover {
-    background-color: #e0e0e0;
+    background-color: #ffe6a5;
   }
 
   .tab-content {
@@ -52,23 +52,24 @@ body {
   }
 
   input {
+    background-color: #E9DAB3;
     padding: 10px;
     margin-bottom: 10px;
     width: calc(80% - 10px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(233, 218, 179, 0.1);
     border-radius: 5px;
     box-sizing: border-box;
     height: 50px;
   }
 
   button {
-    background-color: #f0f0f0;
+    background-color: #E9DAB3;
     border: none;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(233, 218, 179, 0.1);
     border-radius: 5px;
     cursor: pointer;
     box-sizing: border-box;
@@ -76,5 +77,5 @@ body {
   }
 
   button:hover {
-    background-color: #e0e0e0;
+    background-color: #ffe6a5;
   }
