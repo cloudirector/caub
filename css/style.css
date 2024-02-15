@@ -4,37 +4,38 @@
   }
 
   body {
-    margin: 0;
-    font-family: "Comfortaa";
-    background-color: #E9DAB3;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0;
     height: 100vh;
+    font-size: 15px;
+    font-family: "Comfortaa";
+    background-color: #E9DAB3;
   }
 
   #content-container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(233, 218, 179, 1);
-    max-width: 600px;
     width: 100%;
+    padding: 20px;
+    max-width: 600px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(233, 218, 179, 1);
   }
 
   .tab-container {
     display: flex;
-    justify-content: space-between;
     margin-bottom: 20px;
+    justify-content: space-between;
     transition: width 0.5s ease-in-out height 0.5s ease-in-out;
   }
 
   .tab {
     padding: 10px 20px;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(233, 218, 179, 1);
     border-radius: 5px;
+    cursor: pointer;
     background-color: #E9DAB3;
+    box-shadow: 0 0 10px rgba(233, 218, 179, 1);
     transition: background-color 0.5s ease-in-out;
   }
 
@@ -51,37 +52,36 @@
   }
 
   .highlight {
-    background-color: #E9DAB3;
     padding: 2px;
     border-radius: 6px;
+    background-color: #E9DAB3;
   }
 
   input {
     border: none;
-    outline: none;
-    background-color: #E9DAB3;
-    padding: 10px;
-    margin-bottom: 10px;
-    width: calc(80% - 10px);
-    box-shadow: 0 0 10px rgba(233, 218, 179, 1);
-    border-radius: 5px;
-    box-sizing: border-box;
     height: 50px;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    width: calc(80% - 10px);
+    background-color: #E9DAB3;
+    box-shadow: 0 0 10px rgba(233, 218, 179, 1);
   }
 
   button {
-    background-color: #E9DAB3;
     border: none;
+    height: 50px;
+    border-radius: 5px;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-
-    box-shadow: 0 0 10px rgba(233, 218, 179, 1);
-    border-radius: 5px;
-    cursor: pointer;
     box-sizing: border-box;
-    height: 50px;
+    cursor: pointer;
+    background-color: #E9DAB3;
+    box-shadow: 0 0 10px rgba(233, 218, 179, 1);
   }
 
   button:hover {
