@@ -1,4 +1,9 @@
-body {
+  @font-face {
+    font-family: "Comfortaa";
+    src: url("https://cloudirector.github.io/fonts/Comfortaa.ttf");
+  }
+
+  body {
     margin: 0;
     font-family: "Comfortaa";
     background-color: #E9DAB3;
@@ -71,6 +76,7 @@ body {
     text-align: center;
     text-decoration: none;
     display: inline-block;
+
     box-shadow: 0 0 10px rgba(233, 218, 179, 1);
     border-radius: 5px;
     cursor: pointer;
