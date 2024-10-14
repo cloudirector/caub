@@ -1,63 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
+<html data-theme="dark">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="css/daisyui.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/fontawesome.min.css" rel="stylesheet" type="text/css" />
+    <script src="js/tailwindcss.js"></script>
     <title>CAUB</title>
   </head>
-  <body>
-    <div id="content-container">
-      <div class="tab-container">
-        <div class="tab" onclick="showTab('tab1')">
+  <body class="flex items-center justify-center bg-base-100 text-base-content">
+    <!-- container -->
+    <div class="container mx-auto p-5">
+      <!-- Top Bar -->
+      <div class="flex justify-between items-center mb-3 transition ease-in-out">
+        <div class="btn" id="backwardsBtn"Backwards>
           <i class="fa-solid fa-arrow-left"></i>
         </div>
-        <div class="tab" onclick="showTab('tab2')">
+        <div class="text-center">
+          <h1 class="text-3xl">Caub</h1>
+          <h2 class="text-xs text-slate-500">Chrome Automatic Update Blocker</h2>
+        </div>
+        <div class="btn" id="forwardsBtn">
           <i class="fa-solid fa-arrow-right"></i>
         </div>
       </div>
-      <div id="tab1" class="tab-content active">
-        <h2>Chrome Automatic Update Blocker</h2>
-        <p>
-          <span class="highlight">Credits to Bypassi#7037</span>
-        </p>
-        <p>
-          <strong>Only works on Chrome 85 or higher</strong>
-        </p>
-        <p>
-          <strong>Info:</strong>
-        </p>
-        <p>This method (originally found by Catakang#0987) will help you keep your Chromebook downgraded (or on the current version) without automatic updates screwing you over using onc files. You can convince your Chromebook that the WiFi that you're connected to is pay-to-use (like a hotspot using data), and thus it will not check for updates.</p>
-        <p>
-          <em>
-            <span class="highlight">I cannot guarantee that this will work on every WiFi.</span>
-          </em>
-        </p>
-        <p>
-          <strong>Instructions:</strong>
-        </p>
-        <ul>
-          <li>Go to <span class="highlight">chrome://network#state</span> (on your school Chromebook, of course; if this is blocked then you're kinda screwed lol). </li>
-          <li>Scroll to the bottom of the page; you should see a list of <span class="highlight">favorite</span> WiFis that you've connected to in the past. </li>
-          <li>Click the <span class="highlight">+</span> sign next to the WiFi name of each network that you commonly connect your Chromebook to. The more WiFis you expand, the better, but note that they have to come from the <span class="highlight">favorites</span> section. </li>
-          <li>Use <span class="highlight">Ctrl+A</span> and <span class="highlight">Ctrl+C</span> to copy all the text on the entire <span class="highlight">network#state</span> page. </li>
-          <li>Go back to this page and paste the copied text into the textbox on the next tab.</li>
-          <li>Press the <span class="highlight">Generate ONC</span> button below the textbox. </li>
-          <li>Once you have downloaded the file, go to <span class="highlight">chrome://network#general</span> and click on the <span class="highlight">Import ONC</span> button. Import the newly downloaded file. </li>
-        </ul>
-        <p>Your Chromebook will no longer automatically update (as long as you are on a WiFi that you used CAUB on).</p>
-      </div>
-      <div id="tab2" class="tab-content">
-        <div style="display: flex; gap: 10px;">
-          <input placeholder="Read Instructions" />
-          <button onclick="gen()">
-            <b>Download ONC <i class="fa-solid fa-file-arrow-down"></i>
-            </b>
-          </button>
+      <!-- Content -->
+      <div class="flex items-center justify-center gap-10 bg-base-200 p-5 rounded-xl shadow-md mr-4 w-full">
+        <!-- Tab1 -->
+        <div id="tab1" class="tab-content active text-center max-w-prose">
+          <div class="m-4">
+            <strong class="text-black bg-info rounded-xl p-2">
+              Only works on Chrome 85 or higher 
+            </strong>
+          </div>
+          <div>
+            This method will help you keep
+            your Chromebook from automatic updating using onc files. It will
+            convince your Chromebook that the WiFi that you're connected to is
+            pay-to-use, and thus it will not check
+            for updates.
+          </div>
+          <div class="m-4">
+            <strong class="text-black bg-info rounded-xl p-2">
+              Instructions 
+            </strong>
+          </div>
+            Go to chrome://network#state. Scroll to the bottom of the page; you should see a list of favorite WiFis that you've connected to in the past. Click the sign next to the WiFi name of each network that you commonly connect your Chromebook to. The more WiFis you expand, the better, but note that they have to come from the favorites section. Use Ctrl+A and Ctrl+C to copy all the text on the entire network#state page. Go back to this page and paste the copied text into the textbox on the next tab (navigate with the arrow buttons above). Press the Generate ONC and it should download an onc file after thats done, go to chrome://network#general and click on the Import ONC button. Import the downloaded file. 
+          <div class="m-4">
+            <strong class="text-black bg-info rounded-xl p-2">
+              Your Chromebook will no longer automatically update. 
+            </strong>
+          </div>
+        </div>
+        <!-- Tab2 -->
+        <div id="tab2" class="tab-content">
+          <div style="display: flex; gap: 10px">
+            <input placeholder="Read Instructions" class="input w-full max-w-xs"> </input>
+            <button id="genBtn" class="btn">
+              <b>Download ONC <i class="fa-solid fa-file-arrow-down"></i> </b>
+            </button>
+          </div>
         </div>
       </div>
+      <!-- Credit  -->
+      <div class="flex justify-end mt-3 transition ease-in-out">
+        <button class="btn btn-info text-xs rounded-xl" id="bypassiBtn">  Credits to Bypassi and Catakang</button>
+      </div>
     </div>
-    <script src="js/logic.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
